@@ -39,4 +39,22 @@ public class ElementsMainPage {
         $(ElementsMainPageLocators.WEB_TABLES_OPTION).click();
         return new WebTablesPage();
     }
+    @Step("Click to the Buttons")
+    public ButtonsPage clickToButtons(){
+        $(ElementsMainPageLocators.BUTTONS_OPTION).shouldBe(visible);
+        $(ElementsMainPageLocators.BUTTONS_OPTION).click();
+        return new ButtonsPage();
+    }
+    @Step("Click to the Links")
+    public LinksPage clickToLinks(){
+        $(ElementsMainPageLocators.LINKS_OPTION).shouldBe(visible);
+        $(ElementsMainPageLocators.LINKS_OPTION).click();
+        return new LinksPage();
+    }
+    @Step("Click to the Broken Links")
+    public LinksPage clickToBrokenLinks(){
+        $(ElementsMainPageLocators.BROKEN_LINKS_OPTION).shouldBe(visible);
+        $(ElementsMainPageLocators.BROKEN_LINKS_OPTION).click();
+        return new LinksPage();
+    }
 }
